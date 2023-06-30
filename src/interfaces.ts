@@ -7,4 +7,11 @@ interface IError extends Error {
   code?: string;
 }
 
-export { IServerApp, IError };
+interface IUserData {
+  id: string;
+  username: string;
+  age: number;
+  hobbies: string[];
+}
+
+export { IServerApp, IError, IUserData };
