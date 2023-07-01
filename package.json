@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "description": "Node CRUD API using in-memory database",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "build:prod": "webpack --mode=production --node-env=production",
-    "start:prod": "npm run build:prod & node dist/index.js",
-    "start:dev": "nodemon ts-node src/index.ts",
+    "build:prod": "webpack --mode=production",
+    "start:prod": "npm run build:prod && node dist/index",
+    "start:dev": "nodemon",
     "lint": "eslint src --ext .ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
