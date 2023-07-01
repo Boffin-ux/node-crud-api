@@ -1,3 +1,5 @@
+import { IncomingMessage, ServerResponse } from 'http';
+
 interface IServerApp {
   runServer(): void;
   close(): void;
@@ -14,4 +16,15 @@ interface IUserData {
   hobbies: string[];
 }
 
-export { IServerApp, IError, IUserData };
+interface IRouter {
+  getRoute(req: IncomingMessage, res: ServerResponse): Promise<void>;
+}
+
+interface IResponseData {
+  res: ServerResponse;
+  code: number;
+  message?: string;
+  data?: IUserData[] | IUserData;
+}
+
+export { IServerApp, IError, IUserData, IRouter, IResponseData };
