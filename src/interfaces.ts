@@ -2,7 +2,6 @@ import { IncomingMessage, ServerResponse } from 'http';
 
 interface IServerApp {
   runServer(): void;
-  close(): void;
 }
 
 interface IError extends Error {

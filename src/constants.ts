@@ -1,5 +1,6 @@
 const DEFAULT_PORT = 4000;
 const DEFAULT_PATH = '/api/users';
+const HOST = 'localhost';
 
 enum HttpStatus {
   OK = 200,
@@ -23,4 +24,4 @@ enum ResponseMessages {
   SUCCESS = 'Success',
 }
 
-export { DEFAULT_PORT, DEFAULT_PATH, HttpStatus, ResponseMessages };
+export { DEFAULT_PORT, DEFAULT_PATH, HttpStatus, ResponseMessages, HOST };

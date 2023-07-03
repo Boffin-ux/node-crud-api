@@ -19,9 +19,9 @@ export class ServerApp implements IServerApp {
     });
   }
 
-  runServer() {
+  runServer(name = 'Server') {
     this.server.listen(this.port, () => {
-      console.log(`Server process ${process.pid} listen:${this.port}`);
+      console.log(`${name} process ${process.pid} listen:${this.port}`);
     });
 
     this.server.on('error', (err: IError) => {
@@ -31,9 +31,5 @@ export class ServerApp implements IServerApp {
         console.log(err.message);
       }
     });
-  }
-
-  close() {
-    this.server.close();
   }
 }
