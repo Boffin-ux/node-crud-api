@@ -32,4 +32,12 @@ export class ServerApp implements IServerApp {
       }
     });
   }
+
+  close(): void {
+    this.server.close();
+  }
+
+  getServer(): Server {
+    return this.server;
+  }
 }
