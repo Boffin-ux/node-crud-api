@@ -17,6 +17,9 @@ const validateHobbies = ({ hobbies }: IUserData) => {
 
 export const validateUserData = (userData: IUserData) => {
   return (
-    validateName(userData) && validateAge(userData) && validateHobbies(userData)
+    validateName(userData) &&
+    validateAge(userData) &&
+    validateHobbies(userData) &&
+    Object.keys(userData).length < 4
   );
 };
